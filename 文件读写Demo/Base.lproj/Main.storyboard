@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pt1-Pv-TX5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-NM-cvi">
+                                <rect key="frame" x="141.5" y="164" width="92" height="30"/>
+                                <state key="normal" title="简单文件读写"/>
+                                <connections>
+                                    <segue destination="xCc-og-Ztd" kind="show" id="BXb-iZ-6F0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz5-3t-ndA">
+                                <rect key="frame" x="157.5" y="309" width="60" height="30"/>
+                                <state key="normal" title="读写plist"/>
+                                <connections>
+                                    <segue destination="Tzs-4i-yvG" kind="show" id="2qq-nX-f8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euK-2h-1Fr">
+                                <rect key="frame" x="172.5" y="239" width="30" height="30"/>
+                                <state key="normal" title="FILE"/>
+                                <connections>
+                                    <segue destination="Mhq-Y3-Xs0" kind="show" id="M2I-sf-jFD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bz5-3t-ndA" firstAttribute="top" secondItem="euK-2h-1Fr" secondAttribute="bottom" constant="40" id="7JB-qQ-oAi"/>
+                            <constraint firstItem="euK-2h-1Fr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M9R-0G-6sh"/>
+                            <constraint firstItem="bz5-3t-ndA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mp0-HR-c10"/>
+                            <constraint firstItem="euK-2h-1Fr" firstAttribute="top" secondItem="lZS-NM-cvi" secondAttribute="bottom" constant="45" id="Rfu-Go-KOm"/>
+                            <constraint firstItem="lZS-NM-cvi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="gS2-Nn-xeC"/>
+                            <constraint firstItem="lZS-NM-cvi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iQG-36-FWu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SpM-1r-Lpg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="35.532233883058474"/>
+        </scene>
+        <!--Simple View Controller-->
+        <scene sceneID="oO2-Kl-5nS">
+            <objects>
+                <viewController id="xCc-og-Ztd" customClass="SimpleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T1c-YN-4XL"/>
+                        <viewControllerLayoutGuide type="bottom" id="aae-1M-2rl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qQP-m3-cPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDk-Yw-UrA">
+                                <rect key="frame" x="136.5" y="408" width="101" height="30"/>
+                                <state key="normal" title="大文件的复制2"/>
+                                <connections>
+                                    <action selector="clickFiveBtn:" destination="xCc-og-Ztd" eventType="touchUpInside" id="uIg-Rt-yQ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-J8-4q7">
+                                <rect key="frame" x="134.5" y="224" width="105" height="30"/>
+                                <state key="normal" title="NSFileManager"/>
+                                <connections>
+                                    <action selector="clicktwoBtn:" destination="xCc-og-Ztd" eventType="touchUpInside" id="d1O-Z8-ePK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UI5-uf-8o3">
+                                <rect key="frame" x="140.5" y="288" width="93" height="30"/>
+                                <state key="normal" title="NSFileHandle"/>
+                                <connections>
+                                    <action selector="clickThreeBtn:" destination="xCc-og-Ztd" eventType="touchUpInside" id="RmD-53-gDB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEb-zo-tlg">
+                                <rect key="frame" x="141" y="348" width="92" height="30"/>
+                                <state key="normal" title="大文件的复制"/>
+                                <connections>
+                                    <action selector="clickFoureBtn:" destination="xCc-og-Ztd" eventType="touchUpInside" id="CSH-c8-rEY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-u3-DE6">
+                                <rect key="frame" x="54" y="587" width="240" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fjv-KQ-wk0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vme-sY-Qje">
+                                <rect key="frame" x="149" y="164" width="77" height="30"/>
+                                <state key="normal" title="字符串读写"/>
+                                <connections>
+                                    <action selector="clickOneBtn:" destination="xCc-og-Ztd" eventType="touchUpInside" id="VUE-r9-Fxy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZDk-Yw-UrA" firstAttribute="centerX" secondItem="qQP-m3-cPL" secondAttribute="centerX" id="0zP-T0-cbh"/>
+                            <constraint firstItem="qb1-J8-4q7" firstAttribute="centerX" secondItem="qQP-m3-cPL" secondAttribute="centerX" id="1iG-c0-noC"/>
+                            <constraint firstItem="zEb-zo-tlg" firstAttribute="centerX" secondItem="qQP-m3-cPL" secondAttribute="centerX" id="56K-SY-Wk1"/>
+                            <constraint firstItem="ceB-u3-DE6" firstAttribute="leading" secondItem="qQP-m3-cPL" secondAttribute="leadingMargin" constant="38" id="M88-w9-4fi"/>
+                            <constraint firstItem="UI5-uf-8o3" firstAttribute="top" secondItem="qb1-J8-4q7" secondAttribute="bottom" constant="34" id="aTi-yi-nMw"/>
+                            <constraint firstItem="vme-sY-Qje" firstAttribute="top" secondItem="T1c-YN-4XL" secondAttribute="bottom" constant="100" id="aks-8S-yAk"/>
+                            <constraint firstItem="aae-1M-2rl" firstAttribute="top" secondItem="ceB-u3-DE6" secondAttribute="bottom" id="fl6-bQ-8D3"/>
+                            <constraint firstItem="vme-sY-Qje" firstAttribute="centerX" secondItem="qQP-m3-cPL" secondAttribute="centerX" id="gpt-g3-Wgu"/>
+                            <constraint firstItem="UI5-uf-8o3" firstAttribute="centerX" secondItem="qQP-m3-cPL" secondAttribute="centerX" id="iCl-dJ-kll"/>
+                            <constraint firstItem="zEb-zo-tlg" firstAttribute="top" secondItem="UI5-uf-8o3" secondAttribute="bottom" constant="30" id="qZg-0S-Zk4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ceB-u3-DE6" secondAttribute="trailing" constant="65" id="t2u-gh-VWe"/>
+                            <constraint firstItem="qb1-J8-4q7" firstAttribute="top" secondItem="vme-sY-Qje" secondAttribute="bottom" constant="30" id="tKj-YK-Zjv"/>
+                            <constraint firstItem="ZDk-Yw-UrA" firstAttribute="top" secondItem="zEb-zo-tlg" secondAttribute="bottom" constant="30" id="tam-V9-LsK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageShow" destination="ceB-u3-DE6" id="LFC-rt-Sht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGK-bR-iWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="-222"/>
+        </scene>
+        <!--File View Controller-->
+        <scene sceneID="SLg-Wx-pUH">
+            <objects>
+                <viewController id="Mhq-Y3-Xs0" customClass="FileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6Z-Dt-xVK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vT8-mD-OmU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5nl-Dz-WMH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPi-pc-H7I">
+                                <rect key="frame" x="144.5" y="164" width="85" height="30"/>
+                                <state key="normal" title="fopen fclose"/>
+                                <connections>
+                                    <action selector="clickOneBtn:" destination="Mhq-Y3-Xs0" eventType="touchUpInside" id="hxQ-y8-Prp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsB-VI-XVH">
+                                <rect key="frame" x="147.5" y="224" width="79" height="30"/>
+                                <state key="normal" title="fopen fputs"/>
+                                <connections>
+                                    <action selector="clicktwoBtn:" destination="Mhq-Y3-Xs0" eventType="touchUpInside" id="MKQ-e1-Vl4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-pF-gO2">
+                                <rect key="frame" x="164" y="361" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8to-Jb-kXU">
+                                <rect key="frame" x="145.5" y="284" width="83" height="30"/>
+                                <state key="normal" title="fread  fwrite"/>
+                                <connections>
+                                    <action selector="clickThreeBtn:" destination="Mhq-Y3-Xs0" eventType="touchUpInside" id="Tvh-Kj-bLC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nsB-VI-XVH" firstAttribute="top" secondItem="DPi-pc-H7I" secondAttribute="bottom" constant="30" id="Gkk-wH-Q79"/>
+                            <constraint firstItem="nsB-VI-XVH" firstAttribute="centerX" secondItem="5nl-Dz-WMH" secondAttribute="centerX" id="Kap-D6-amo"/>
+                            <constraint firstItem="8to-Jb-kXU" firstAttribute="top" secondItem="nsB-VI-XVH" secondAttribute="bottom" constant="30" id="RnA-A4-Wvk"/>
+                            <constraint firstItem="DPi-pc-H7I" firstAttribute="centerX" secondItem="5nl-Dz-WMH" secondAttribute="centerX" id="f3j-Q6-hga"/>
+                            <constraint firstItem="8to-Jb-kXU" firstAttribute="centerX" secondItem="5nl-Dz-WMH" secondAttribute="centerX" id="oqD-Rv-PCP"/>
+                            <constraint firstItem="DPi-pc-H7I" firstAttribute="top" secondItem="e6Z-Dt-xVK" secondAttribute="bottom" constant="100" id="zF2-TP-k0x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KE-ma-nxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="466"/>
+        </scene>
+        <!--Plist View Controller-->
+        <scene sceneID="g5Y-Rv-YyU">
+            <objects>
+                <viewController id="Tzs-4i-yvG" customClass="PlistViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dve-9B-lbz"/>
+                        <viewControllerLayoutGuide type="bottom" id="RlA-FI-nvY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCe-hW-TJO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-3D-kKM">
+                                <rect key="frame" x="120" y="168" width="135" height="30"/>
+                                <state key="normal" title="NSFileManager读写"/>
+                                <connections>
+                                    <action selector="clickOneBtn:" destination="Tzs-4i-yvG" eventType="touchUpInside" id="nFf-A0-8oU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYV-fN-enj">
+                                <rect key="frame" x="157.5" y="269" width="60" height="30"/>
+                                <state key="normal" title="FILE读写"/>
+                                <connections>
+                                    <action selector="clickTwoBtn:" destination="Tzs-4i-yvG" eventType="touchUpInside" id="6IS-LI-SbL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cdG-3D-kKM" firstAttribute="centerX" secondItem="SCe-hW-TJO" secondAttribute="centerX" id="MMX-ZJ-sTi"/>
+                            <constraint firstItem="cdG-3D-kKM" firstAttribute="top" secondItem="Dve-9B-lbz" secondAttribute="bottom" constant="104" id="jld-Ck-6KA"/>
+                            <constraint firstItem="rYV-fN-enj" firstAttribute="centerX" secondItem="SCe-hW-TJO" secondAttribute="centerX" id="peJ-yl-41U"/>
+                            <constraint firstItem="rYV-fN-enj" firstAttribute="top" secondItem="cdG-3D-kKM" secondAttribute="bottom" constant="71" id="q1g-F4-ZkR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpn-jb-B2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="1124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BcJ-Zz-Yhk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pt1-Pv-TX5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="egA-9S-g9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D2p-hy-eth"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10O-oZ-8Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.19999999999999" y="689.5052473763119"/>
+        </scene>
+    </scenes>
+</document>
